@@ -1,0 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body,
+body > div:first-child,
+div#__next {
+  height: 100%;
+}

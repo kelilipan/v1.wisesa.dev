@@ -1,6 +1,6 @@
 {
   "name": "wisesa",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,11 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "axios": "^0.19.2",
+    "emotion-theming": "^10.0.27",
     "next": "9.4.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.88.2"
+    "react-dom": "16.13.1"
   }
 }

@@ -1,8 +1,16 @@
 // import App from 'next/app'
-import 'semantic-ui-css/semantic.min.css'
-
+import "../assets/css/style.css";
+import { ThemeProvider, ColorModeProvider, CSSReset } from "@chakra-ui/core";
+import theme from "../theme";
 function CustomApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={theme}>
+      <ColorModeProvider>
+        <CSSReset />
+        <Component {...pageProps} />
+      </ColorModeProvider>
+    </ThemeProvider>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -17,4 +25,4 @@ function CustomApp({ Component, pageProps }) {
 //   return { ...appProps }
 // }
 
-export default CustomApp
+export default CustomApp;
