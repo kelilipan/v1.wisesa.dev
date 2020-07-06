@@ -5,7 +5,6 @@ import {
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   Stack,
@@ -51,9 +50,12 @@ const Navbar = () => {
             p={2}
           ></Link>
         </Stack>
-        <Box as="button" onClick={onOpen} aria-label="Open menu" p={2}>
-          <Box as={FaBars} size="18px" />
-        </Box>
+        <Stack isInline p={2}>
+          <ThemeSwitcher mr={3} />
+          <Box as="button" onClick={onOpen} aria-label="Open menu">
+            <Box as={FaBars} size="18px" />
+          </Box>
+        </Stack>
       </Box>
       <Box
         d={{ default: "none", md: "flex" }}
@@ -84,7 +86,6 @@ const Navbar = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader />
-
           <DrawerBody>
             <Stack alignItems="flex-start" spacing={2}>
               {navLinks.map((item, i) => (
@@ -92,8 +93,6 @@ const Navbar = () => {
               ))}
             </Stack>
           </DrawerBody>
-
-          <DrawerFooter>wasd</DrawerFooter>
         </DrawerContent>
       </Drawer>
     </Box>

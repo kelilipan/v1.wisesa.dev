@@ -2,11 +2,11 @@ import React from "react";
 import style from "./ThemeSwitcher.module.scss";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { Box, useColorMode } from "@chakra-ui/core";
-const ThemeSwitcher = () => {
+const ThemeSwitcher = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
   return (
-    <Box>
+    <Box {...props}>
       <input
         defaultChecked={isDark}
         type="checkbox"

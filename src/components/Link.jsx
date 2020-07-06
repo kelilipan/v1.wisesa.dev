@@ -8,7 +8,6 @@ const Link = ({ route, href, linkAs, nextProps, children, ...props }) => {
     color: props.color || (colorMode === "dark" ? "blue.300" : "blue.500"),
   };
   if (route) {
-    console.log(linkProps);
     return (
       <NextLink as={linkAs} href={href} passHref>
         <ChakraLink {...linkProps}>{children}</ChakraLink>
