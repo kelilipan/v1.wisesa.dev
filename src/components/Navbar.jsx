@@ -18,14 +18,14 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navLinks = [
     {
-      href: "/link1",
+      href: "/blog",
       color: "currentColor",
-      children: "link1",
+      children: "Blog",
     },
     {
-      href: "/link2",
+      href: "/project",
       color: "currentColor",
-      children: "link2",
+      children: "Project",
     },
     {
       href: "/about",

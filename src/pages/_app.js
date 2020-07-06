@@ -1,9 +1,10 @@
 // import App from 'next/app'
 import {
-  ThemeProvider,
+  Box,
   ColorModeProvider,
   CSSReset,
   Stack,
+  ThemeProvider,
 } from "@chakra-ui/core";
 import Router from "next/router";
 import NProgress from "nprogress";
@@ -29,7 +30,9 @@ function CustomApp({ Component, pageProps }) {
           px={{ lg: 6 }}
         >
           <Navbar />
-          <Component {...pageProps} />
+          <Box flexGrow={1}>
+            <Component {...pageProps} />
+          </Box>
         </Stack>
       </ColorModeProvider>
     </ThemeProvider>

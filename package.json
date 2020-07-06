@@ -13,6 +13,7 @@
     "@emotion/styled": "^10.0.27",
     "axios": "^0.19.2",
     "emotion-theming": "^10.0.27",
+    "framer-motion": "^1.11.1",
     "next": "9.4.4",
     "node-sass": "^4.14.1",
     "nprogress": "^0.2.0",
