@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/core";
 import Router from "next/router";
 import NProgress from "nprogress";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 import theme from "../theme";
@@ -36,6 +37,7 @@ function CustomApp({ Component, pageProps }) {
               <Component {...pageProps} />
             </Page>
           </Box>
+          <Footer />
         </Stack>
       </ColorModeProvider>
     </ThemeProvider>

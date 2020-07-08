@@ -6,19 +6,16 @@ const Link = ({ route, href, linkAs, nextProps, children, ...props }) => {
   const linkProps = {
     ...props,
     color: props.color || (colorMode === "dark" ? "blue.300" : "blue.500"),
+    children,
   };
   if (route) {
     return (
       <NextLink as={linkAs} href={href} passHref>
-        <ChakraLink {...linkProps}>{children}</ChakraLink>
+        <ChakraLink {...linkProps} />
       </NextLink>
     );
   }
-  return (
-    <ChakraLink href={href} {...linkProps}>
-      {children}
-    </ChakraLink>
-  );
+  return <ChakraLink href={href} {...linkProps} isExternal />;
 };
 Link.defaultProps = {
   route: false,
