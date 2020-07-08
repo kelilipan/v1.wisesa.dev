@@ -30,19 +30,15 @@ export default function Home() {
             Hi, I'm Wisesa. 🐱
           </Heading>
           <Text fontSize={{ _: 16, lg: 18 }}>
-            Third-year informatics student at{" "}
+            An ordinary student from{" "}
             <Code d="inline" variantColor="red" fontWeight="bold">
               Telkom University
             </Code>{" "}
             that has a strong enthusiasm for new technology. Interested in{" "}
             <Code d="inline" variantColor="orange">
               machine learning
-            </Code>{" "}
-            (especially{" "}
-            <Code d="inline" variantColor="green">
-              NLP
             </Code>
-            ),{" "}
+            ,{" "}
             <Code d="inline" variantColor="red">
               web technologies
             </Code>
