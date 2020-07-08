@@ -3,7 +3,7 @@ import { Box, Text } from "@chakra-ui/core";
 import Link from "../Link";
 const Footer = () => {
   return (
-    <Box textAlign="center" py={2}>
+    <Box textAlign="center" py={3} px={2}>
       <Text fontSize={12} mb={1}>
         Made using <Link href="https://nextjs.org">Next.js</Link>,{" "}
         <Link href="https://chakra-ui.com">Chakra UI</Link>, and{" "}

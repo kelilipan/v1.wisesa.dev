@@ -10,7 +10,7 @@ import {
   Stack,
   useDisclosure,
 } from "@chakra-ui/core";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaGithub } from "react-icons/fa";
 
 import Link from "../Link";
 import ThemeSwitcher from "../ThemeSwitcher";
@@ -75,10 +75,11 @@ const Navbar = () => {
             <Link key={i} route {...item} p={2} />
           ))}
         </Stack>
-        <Stack>
-          <Box p={2}>
-            <ThemeSwitcher />
-          </Box>
+        <Stack isInline alignItems="center">
+          <ThemeSwitcher />
+          <Link href="https://github.com/raisoturu" color="currentColor" p={2}>
+            <Box as={FaGithub} size="22px" />
+          </Link>
         </Stack>
       </Box>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
