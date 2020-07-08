@@ -15,7 +15,7 @@ const NotFound = () => {
           transition={{ delay: 0.2, type: "spring", duration: 0.5 }}
           initial={{ y: 5 }}
           whileHover={{ y: -10 }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 0.9, rotate: 45 }}
           d="inline-block"
         >
           😭

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./ThemeSwitcher.module.scss";
+import style from "./style.module.scss";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { Box, useColorMode } from "@chakra-ui/core";
 const ThemeSwitcher = (props) => {
