@@ -9,8 +9,10 @@ import {
   Code,
   useColorMode,
 } from "@chakra-ui/core";
+import MotionBox from "../components/MotionBox";
 export default function Home() {
   const { colorMode } = useColorMode();
+
   return (
     <PageLayout d="flex" alignItems={{ md: "center" }} h="full" flexGrow={1}>
       <Head>
@@ -41,13 +43,21 @@ export default function Home() {
           </Text>
         </Stack>
         <Flex w={{ lg: 2 / 5 }} justifyContent="center" alignItems="center">
-          <Image
-            size="17em"
-            rounded="full"
-            src="/img/me2.jpg"
-            alt="it's me"
-            style={{ filter: colorMode === "dark" && "grayscale(40%)" }}
-          />
+          <MotionBox
+            whileTap={{
+              scale: 0.95,
+              transition: { type: "spring", stiffness: 500 },
+            }}
+          >
+            <Image
+              draggable={false}
+              size="17em"
+              rounded="full"
+              src="/img/me2.jpg"
+              alt="it's me"
+              style={{ filter: colorMode === "dark" && "grayscale(40%)" }}
+            />
+          </MotionBox>
         </Flex>
       </Stack>
     </PageLayout>
