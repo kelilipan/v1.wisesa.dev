@@ -12,3 +12,10 @@ html {
   -ms-user-select: none !important;
   user-select: none !important;
 }
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
+}
