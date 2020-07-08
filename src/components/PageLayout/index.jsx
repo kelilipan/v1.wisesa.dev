@@ -7,7 +7,7 @@ const Page = ({ children, ...props }) => {
       initial={{ y: 30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.1 } }}
-      transition={{ delay: 0.2 }}
+      transition={{ type: "spring", delay: 0.2, stiffness: 200 }}
       {...props}
     >
       <Box px={{ default: "none", md: 6 }}>{children}</Box>
