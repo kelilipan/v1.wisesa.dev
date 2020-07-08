@@ -10,7 +10,7 @@ import {
   Stack,
   useDisclosure,
 } from "@chakra-ui/core";
-import { FaBars, FaGithub } from "react-icons/fa";
+import { FaBars, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import Link from "../Link";
 import ThemeSwitcher from "../ThemeSwitcher";
@@ -31,6 +31,16 @@ const Navbar = () => {
       href: "/about",
       color: "currentColor",
       children: "About",
+    },
+  ];
+  const externalLinks = [
+    {
+      url: "https://github.com/raisoturu",
+      icon: FaGithub,
+    },
+    {
+      url: "https://www.linkedin.com/in/anvaqta/",
+      icon: FaLinkedin,
     },
   ];
   return (
@@ -77,9 +87,11 @@ const Navbar = () => {
         </Stack>
         <Stack isInline alignItems="center">
           <ThemeSwitcher />
-          <Link href="https://github.com/raisoturu" color="currentColor" p={2}>
-            <Box as={FaGithub} size="22px" />
-          </Link>
+          {externalLinks.map((data, i) => (
+            <Link key={i} href={data.url} color="currentColor" py={2} px="1px">
+              <Box as={data.icon} size="22px" />
+            </Link>
+          ))}
         </Stack>
       </Box>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>

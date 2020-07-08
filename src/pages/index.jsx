@@ -1,7 +1,16 @@
 import Head from "next/head";
 import PageLayout from "../components/PageLayout";
-import { Heading, Stack, Text, Flex, Image, Code } from "@chakra-ui/core";
+import {
+  Heading,
+  Stack,
+  Text,
+  Flex,
+  Image,
+  Code,
+  useColorMode,
+} from "@chakra-ui/core";
 export default function Home() {
+  const { colorMode } = useColorMode();
   return (
     <PageLayout d="flex" alignItems={{ md: "center" }} h="full" flexGrow={1}>
       <Head>
@@ -32,7 +41,13 @@ export default function Home() {
           </Text>
         </Stack>
         <Flex w={{ lg: 2 / 5 }} justifyContent="center" alignItems="center">
-          <Image size="17em" rounded="full" src="/img/me.jpeg" alt="it's me" />
+          <Image
+            size="17em"
+            rounded="full"
+            src="/img/me2.jpg"
+            alt="it's me"
+            style={{ filter: colorMode === "dark" && "grayscale(40%)" }}
+          />
         </Flex>
       </Stack>
     </PageLayout>
