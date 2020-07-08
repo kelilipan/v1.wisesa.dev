@@ -10,17 +10,16 @@ import Router from "next/router";
 import NProgress from "nprogress";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Page from "../components/Page";
 import theme from "../theme";
 
 import "nprogress/nprogress.css";
 import "../assets/css/style.css";
+import { AnimatePresence } from "framer-motion";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
-
-function CustomApp({ Component, pageProps }) {
+function CustomApp({ Component, pageProps, router }) {
   return (
     <ThemeProvider theme={theme}>
       <ColorModeProvider>
@@ -33,9 +32,9 @@ function CustomApp({ Component, pageProps }) {
         >
           <Navbar />
           <Box flexGrow={1}>
-            <Page>
-              <Component {...pageProps} />
-            </Page>
+            <AnimatePresence exitBeforeEnter>
+              <Component {...pageProps} key={router.route} />
+            </AnimatePresence>
           </Box>
           <Footer />
         </Stack>
