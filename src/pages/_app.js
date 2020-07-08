@@ -9,6 +9,7 @@ import {
 import Router from "next/router";
 import NProgress from "nprogress";
 import Navbar from "../components/Navbar";
+import Page from "../components/Page";
 import theme from "../theme";
 
 import "nprogress/nprogress.css";
@@ -31,7 +32,9 @@ function CustomApp({ Component, pageProps }) {
         >
           <Navbar />
           <Box flexGrow={1}>
-            <Component {...pageProps} />
+            <Page>
+              <Component {...pageProps} />
+            </Page>
           </Box>
         </Stack>
       </ColorModeProvider>
