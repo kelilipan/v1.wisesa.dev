@@ -31,21 +31,36 @@ export default function Home() {
           </Heading>
           <Text fontSize={{ _: 16, lg: 18 }}>
             Third-year informatics student at{" "}
-            <Code variantColor="red" fontWeight="bold">
+            <Code d="inline" variantColor="red" fontWeight="bold">
               Telkom University
             </Code>{" "}
             that has a strong enthusiasm for new technology. Interested in{" "}
-            <Code variantColor="orange">machine learning</Code> (especially{" "}
-            <Code variantColor="green">NLP</Code>),{" "}
-            <Code variantColor="red">web technologies</Code>, fall in love with{" "}
-            <Code variantColor="blue">react.js</Code> and{" "}
-            <Code variantColor="yellow">javascript.</Code>
+            <Code d="inline" variantColor="orange">
+              machine learning
+            </Code>{" "}
+            (especially{" "}
+            <Code d="inline" variantColor="green">
+              NLP
+            </Code>
+            ),{" "}
+            <Code d="inline" variantColor="red">
+              web technologies
+            </Code>
+            , fall in love with{" "}
+            <Code d="inline" variantColor="blue">
+              react.js
+            </Code>{" "}
+            and{" "}
+            <Code d="inline" variantColor="yellow">
+              javascript.
+            </Code>
           </Text>
         </Stack>
         <Flex w={{ lg: 2 / 5 }} justifyContent="center" alignItems="center">
           <MotionBox
             whileTap={{
               scale: 0.95,
+              rotate: -5,
               transition: { type: "spring", stiffness: 500 },
             }}
           >
@@ -55,7 +70,7 @@ export default function Home() {
               rounded="full"
               src="/img/me2.jpg"
               alt="it's me"
-              style={{ filter: colorMode === "dark" && "grayscale(40%)" }}
+              style={{ filter: colorMode === "dark" && "grayscale(45%)" }}
             />
           </MotionBox>
         </Flex>

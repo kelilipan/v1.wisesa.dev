@@ -104,6 +104,13 @@ const Navbar = () => {
               {navLinks.map((item, i) => (
                 <Link key={i} route {...item} p={2} />
               ))}
+              <Stack mt={2} isInline>
+                {externalLinks.map((data, i) => (
+                  <Link key={i} href={data.url} color="currentColor" p={2}>
+                    <Box as={data.icon} size="26px" />
+                  </Link>
+                ))}
+              </Stack>
             </Stack>
           </DrawerBody>
         </DrawerContent>

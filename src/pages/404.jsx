@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { Stack, Code, Heading, Text } from "@chakra-ui/core";
 import { useRouter } from "next/router";
 import MotionBox from "../components/MotionBox";
@@ -9,6 +10,9 @@ const NotFound = () => {
   const { asPath } = useRouter();
   return (
     <PageLayout>
+      <Head>
+        <title>Whoops... 404 Not Found😭</title>
+      </Head>
       <Stack textAlign="center" mt={8}>
         <Heading fontSize={{ _: "100px", md: "120px" }} className="noSelect">
           4
