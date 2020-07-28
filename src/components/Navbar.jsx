@@ -12,8 +12,8 @@ import {
 } from "@chakra-ui/core";
 import { FaBars, FaGithub, FaLinkedin } from "react-icons/fa";
 
-import Link from "../Link";
-import ThemeSwitcher from "../ThemeSwitcher";
+import Link from "./Link";
+import ThemeSwitcher from "./ThemeSwitcher";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navLinks = [

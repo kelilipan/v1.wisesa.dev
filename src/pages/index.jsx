@@ -5,12 +5,32 @@ import {
   Stack,
   Text,
   Flex,
-  Image,
   Code,
   useColorMode,
+  Box,
 } from "@chakra-ui/core";
 import MotionBox from "../components/MotionBox";
-export default function Home() {
+import cms from "../util/cms";
+import Image from "graphcms-image";
+export const getStaticProps = async () => {
+  const { siteConfigs } = await cms(`
+    {
+      siteConfigs {
+        homePicture {
+          handle
+          width
+          height
+        }
+      }
+    }
+  `);
+  return {
+    props: {
+      ...siteConfigs[0],
+    },
+  };
+};
+export default function Home({ homePicture }) {
   const { colorMode } = useColorMode();
 
   return (
@@ -60,14 +80,25 @@ export default function Home() {
               transition: { type: "spring", stiffness: 500 },
             }}
           >
-            <Image
+            <Box size="17em">
+              <Image
+                alt="it's me"
+                image={homePicture}
+                className="noDrag"
+                style={{
+                  borderRadius: "100%",
+                  filter: colorMode === "dark" && "grayscale(45%)",
+                }}
+              />
+            </Box>
+            {/* <Image
               draggable={false}
               size="17em"
               rounded="full"
               src="/img/me2.jpg"
               alt="it's me"
               style={{ filter: colorMode === "dark" && "grayscale(45%)" }}
-            />
+            /> */}
           </MotionBox>
         </Flex>
       </Stack>

@@ -1,5 +1,5 @@
 import React from "react";
-import MotionBox from "../MotionBox";
+import MotionBox from "./MotionBox";
 import { Box } from "@chakra-ui/core";
 const Page = ({ children, ...props }) => {
   return (

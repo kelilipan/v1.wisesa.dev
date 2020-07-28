@@ -1,4 +1,4 @@
-// import App from 'next/app'
+// import NextApp from "next/app";
 import {
   Box,
   ColorModeProvider,
@@ -19,7 +19,7 @@ import { AnimatePresence } from "framer-motion";
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
-function CustomApp({ Component, pageProps, router }) {
+function App({ Component, pageProps, router }) {
   return (
     <ThemeProvider theme={theme}>
       <ColorModeProvider>
@@ -43,16 +43,4 @@ function CustomApp({ Component, pageProps, router }) {
   );
 }
 
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// CustomApp.getInitialProps = async (appContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//
-//   return { ...appProps }
-// }
-
-export default CustomApp;
+export default App;
