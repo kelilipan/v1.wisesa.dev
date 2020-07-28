@@ -18,7 +18,7 @@ const NotFound = () => {
           4
           <MotionBox
             animate={{ y: [0, 5, 0] }}
-            transition={{ delay: 0.2, type: "spring", duration: 0.5 }}
+            transition={{ type: "spring", duration: 0.5 }}
             initial={{ y: 5 }}
             whileHover={{ y: -10 }}
             whileTap={{ scale: 0.9, rotate: 45 }}
