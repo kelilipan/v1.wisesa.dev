@@ -22,7 +22,7 @@ const BlogCard = ({ title, tags, desc, picture, slug, ...props }) => {
           alt={title}
           image={{ handle: picture.handle, height: 270, width: 480 }}
           className="noDrag"
-          max
+          style={{ height: "270px" }}
         />
       </Link>
       <Stack isInline mt={2}>

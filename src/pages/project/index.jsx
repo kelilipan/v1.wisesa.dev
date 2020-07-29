@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
 };
 const index = ({ project }) => {
   return (
-    <PageLayout px={{ default: 6, md: 0 }}>
+    <PageLayout>
       <Head>
         <title>Project</title>
       </Head>
