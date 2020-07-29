@@ -68,8 +68,9 @@ export default function Home({ homePicture }) {
             </Code>{" "}
             and{" "}
             <Code d="inline" variantColor="yellow">
-              javascript.
+              javascript
             </Code>
+            .
           </Text>
         </Stack>
         <Flex w={{ lg: 2 / 5 }} justifyContent="center" alignItems="center">
