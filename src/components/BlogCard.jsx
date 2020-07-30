@@ -10,7 +10,7 @@ const BlogCard = ({ title, tags, desc, picture, slug, ...props }) => {
       case "react":
         return "blue";
       case "javascript":
-        return "orange";
+        return "yellow";
       default:
         return "gray";
     }

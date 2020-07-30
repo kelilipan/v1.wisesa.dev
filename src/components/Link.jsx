@@ -1,7 +1,15 @@
 import React from "react";
 import NextLink from "next/link";
 import { Link as ChakraLink, useColorMode } from "@chakra-ui/core";
-const Link = ({ route, href, linkAs, nextProps, children, ...props }) => {
+const Link = ({
+  route,
+  href,
+  linkAs,
+  nextProps,
+  children,
+  isExternal,
+  ...props
+}) => {
   const { colorMode } = useColorMode();
   const linkProps = {
     ...props,
@@ -15,9 +23,10 @@ const Link = ({ route, href, linkAs, nextProps, children, ...props }) => {
       </NextLink>
     );
   }
-  return <ChakraLink href={href} {...linkProps} isExternal />;
+  return <ChakraLink href={href} {...linkProps} isExternal={isExternal} />;
 };
 Link.defaultProps = {
   route: false,
+  isExternal: true,
 };
 export default Link;

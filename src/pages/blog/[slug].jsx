@@ -2,9 +2,17 @@ import React from "react";
 import PageLayout from "../../components/PageLayout";
 import cms from "../../util/cms";
 import Head from "next/head";
-import { Stack, Text, Heading } from "@chakra-ui/core";
+import {
+  Stack,
+  Text,
+  Heading,
+  Divider,
+  useColorMode,
+  Box,
+} from "@chakra-ui/core";
 // import Image from "graphcms-image";
-
+import Markdown from "react-markdown";
+import { blogPostRenderer } from "../../util/renderer";
 export const getStaticProps = async ({ params }) => {
   const { post } = await cms(
     `
@@ -59,6 +67,7 @@ const Post = ({ data }) => {
     month: "long",
     day: "numeric",
   });
+  const { colorMode } = useColorMode();
   return (
     <PageLayout px={0}>
       <Head>
@@ -77,6 +86,14 @@ const Post = ({ data }) => {
         <Text color="gray.400" fontSize={14}>
           Publised at {publishedAt}
         </Text>
+        <Divider mt={4} />
+        <Box mt={4}>
+          <Markdown
+            source={data.content}
+            escapeHtml={false}
+            renderers={blogPostRenderer(colorMode)}
+          />
+        </Box>
       </Stack>
     </PageLayout>
   );
