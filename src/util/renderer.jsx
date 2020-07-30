@@ -8,6 +8,7 @@ import {
   List,
   ListItem,
   Divider,
+  Image,
 } from "@chakra-ui/core";
 import Link from "../components/Link";
 import Code from "../components/Code";
@@ -48,6 +49,18 @@ export const blogPostRenderer = (colorMode) => ({
       <Heading as={`h${level}`} size={sizes[level - 1]} id={id} {...props}>
         {children}
       </Heading>
+    );
+  },
+  image: (props) => {
+    return (
+      <React.Fragment>
+        <Box mb={2}>
+          <Image borderRadius="md" mx="auto" maxW="2xl" w="100%" {...props} />
+        </Box>
+        <Box fontSize="sm" textAlign="center">
+          {props.alt}
+        </Box>
+      </React.Fragment>
     );
   },
   inlineCode: (props) => <InlineCode display="inline" {...props} />,

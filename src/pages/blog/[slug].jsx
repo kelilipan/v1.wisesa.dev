@@ -78,7 +78,7 @@ const Post = ({ data }) => {
         image={{ ...data.picture, height: 450, width: 800 }}
         // style={{ height: "450px" }}
       /> */}
-      <Stack px={{ default: 6, md: 0 }}>
+      <Stack px={{ default: 6, md: 0 }} mb={10}>
         <Heading as="h1" fontSize={{ _: "4xl", md: "5xl" }}>
           {data.title}
         </Heading>
