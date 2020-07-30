@@ -34,7 +34,14 @@ export default function Home({ homePicture }) {
   const { colorMode } = useColorMode();
 
   return (
-    <PageLayout d="flex" alignItems={{ md: "center" }} h="full" flexGrow={1}>
+    <PageLayout
+      d="flex"
+      alignItems={{ md: "center" }}
+      h="full"
+      flexGrow={1}
+      px={0}
+      pt={0}
+    >
       <Head>
         <title>Hi, I'm Wisesa</title>
         <link rel="icon" href="/favicon.ico" />
@@ -68,8 +75,9 @@ export default function Home({ homePicture }) {
             </Code>{" "}
             and{" "}
             <Code d="inline" variantColor="yellow">
-              javascript.
+              javascript
             </Code>
+            .
           </Text>
         </Stack>
         <Flex w={{ lg: 2 / 5 }} justifyContent="center" alignItems="center">
@@ -91,14 +99,6 @@ export default function Home({ homePicture }) {
                 }}
               />
             </Box>
-            {/* <Image
-              draggable={false}
-              size="17em"
-              rounded="full"
-              src="/img/me2.jpg"
-              alt="it's me"
-              style={{ filter: colorMode === "dark" && "grayscale(45%)" }}
-            /> */}
           </MotionBox>
         </Flex>
       </Stack>

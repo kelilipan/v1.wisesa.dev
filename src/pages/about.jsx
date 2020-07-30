@@ -4,7 +4,7 @@ import Head from "next/head";
 import PageLayout from "../components/PageLayout";
 const about = () => {
   return (
-    <PageLayout px={{ default: 6, md: 0 }}>
+    <PageLayout>
       <Head>
         <title>About me</title>
         <link rel="icon" href="/favicon.ico" />
