@@ -13,7 +13,7 @@ import {
 // import Image from "graphcms-image";
 import Markdown from "react-markdown";
 import { blogPostRenderer } from "../../util/renderer";
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   const { post } = await cms(
     `
     query GetPost($slug: String!) {
@@ -25,11 +25,6 @@ export const getStaticProps = async ({ params }) => {
         tags
         desc
         slug
-        picture {
-          handle
-          width
-          height
-        }
       }
     }
     `,
@@ -42,22 +37,6 @@ export const getStaticProps = async ({ params }) => {
     props: {
       data: post,
     },
-  };
-};
-
-export const getStaticPaths = async () => {
-  const { posts } = await cms(`
-  {
-    posts {
-      slug
-    }
-  }
-  `);
-  return {
-    paths: posts.map(({ slug }) => ({
-      params: { slug },
-    })),
-    fallback: false,
   };
 };
 
