@@ -48,7 +48,7 @@ const index = ({ project }) => {
           mt={4}
           templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
           columnGap={2}
-          rowGap={5}
+          rowGap={{ _: 2, md: 5 }}
         >
           {project.map((data, idx) => {
             return <BlogCard project key={idx} {...data} />;
