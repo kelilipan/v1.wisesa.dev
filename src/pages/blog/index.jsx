@@ -7,7 +7,7 @@ import BlogCard from "../../components/BlogCard";
 export const getStaticProps = async () => {
   const { posts } = await cms(`
     {
-      posts(orderBy: publishedAt_DESC) {
+      posts(orderBy: createdAt_DESC) {
         id
         content
         publishedAt
