@@ -7,7 +7,7 @@ import BlogCard from "../../components/BlogCard";
 export const getStaticProps = async () => {
   const { posts } = await cms(`
     {
-      posts {
+      posts(orderBy: publishedAt_DESC) {
         id
         content
         publishedAt
@@ -44,7 +44,7 @@ const index = ({ posts }) => {
           mt={6}
           templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
           gap={2}
-          rowGap={{ _: 5, md: 0 }}
+          rowGap={5}
         >
           {posts.map((data, idx) => {
             return <BlogCard key={idx} {...data} />;
