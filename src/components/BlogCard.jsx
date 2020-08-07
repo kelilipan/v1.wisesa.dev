@@ -23,7 +23,7 @@ const BlogCard = ({ title, tags, desc, picture, slug, project, ...props }) => {
       <Link route href={`${link}/${slug}`}>
         <Image
           alt={title}
-          image={{ handle: picture.handle, height: 270, width: 480 }}
+          image={{ handle: picture.handle, height: 500, width: 1080 }}
           className="noDrag"
           style={{ height: "245px" }}
         />
