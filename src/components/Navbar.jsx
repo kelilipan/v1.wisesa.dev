@@ -63,7 +63,7 @@ const Navbar = () => {
         <Stack isInline p={2}>
           <ThemeSwitcher mr={3} />
           <Box as="button" onClick={onOpen} aria-label="Open menu">
-            <Box as={FaBars} size="18px" />
+            <Box as={FaBars} boxSize="18px" />
           </Box>
         </Stack>
       </Box>

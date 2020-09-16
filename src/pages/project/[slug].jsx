@@ -96,7 +96,7 @@ const Post = ({ data }) => {
           <Box mt="4">
             {url && (
               <Button
-                variantColor="blue"
+                colorScheme="blue"
                 as="a"
                 target="_blank"
                 rel="noopener noreferrer"
