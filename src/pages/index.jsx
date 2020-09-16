@@ -9,7 +9,6 @@ import {
   useColorMode,
   Box,
 } from "@chakra-ui/core";
-import MotionBox from "../components/MotionBox";
 import cms from "../util/cms";
 import Image from "graphcms-image";
 import { motion } from "framer-motion";

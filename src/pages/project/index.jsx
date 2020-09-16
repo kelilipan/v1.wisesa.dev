@@ -12,8 +12,6 @@ export const getStaticProps = async () => {
         id
         desc
         content
-        publishedAt
-        releaseDate
         slug
         source
         tags
