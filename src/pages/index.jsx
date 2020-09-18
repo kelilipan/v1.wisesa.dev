@@ -9,9 +9,9 @@ import {
   useColorMode,
   Box,
 } from "@chakra-ui/core";
-import MotionBox from "../components/MotionBox";
 import cms from "../util/cms";
 import Image from "graphcms-image";
+import { motion } from "framer-motion";
 export const getStaticProps = async () => {
   const { siteConfigs } = await cms(`
     {
@@ -58,37 +58,37 @@ export default function Home({ homePicture }) {
           </Heading>
           <Text fontSize={{ _: 16, lg: 18 }}>
             An ordinary student from{" "}
-            <Code d="inline" variantColor="red" fontWeight="bold">
+            <Code d="inline" colorScheme="red" fontWeight="bold">
               Telkom University
             </Code>{" "}
             that has a strong enthusiasm for new technology. Interested in{" "}
-            <Code d="inline" variantColor="orange">
+            <Code d="inline" colorScheme="orange">
               machine learning
             </Code>
             ,{" "}
-            <Code d="inline" variantColor="red">
+            <Code d="inline" colorScheme="red">
               web technologies
             </Code>
             , fall in love with{" "}
-            <Code d="inline" variantColor="blue">
+            <Code d="inline" colorScheme="blue">
               react.js
             </Code>{" "}
             and{" "}
-            <Code d="inline" variantColor="yellow">
+            <Code d="inline" colorScheme="yellow">
               javascript
             </Code>
             .
           </Text>
         </Stack>
         <Flex w={{ lg: 2 / 5 }} justifyContent="center" alignItems="center">
-          <MotionBox
+          <motion.div
             whileTap={{
               scale: 0.95,
               rotate: -5,
               transition: { type: "spring", stiffness: 500 },
             }}
           >
-            <Box size="17em">
+            <Box boxSize="17em">
               <Image
                 alt="it's me"
                 image={homePicture}
@@ -99,7 +99,7 @@ export default function Home({ homePicture }) {
                 }}
               />
             </Box>
-          </MotionBox>
+          </motion.div>
         </Flex>
       </Stack>
     </PageLayout>

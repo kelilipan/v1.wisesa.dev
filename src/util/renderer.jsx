@@ -28,7 +28,7 @@ const slugifyChildren = (children) => {
 };
 
 export const blogPostRenderer = (colorMode) => ({
-  root: (props) => <Stack {...props} spacing={4} />,
+  root: () => <Stack spacing={4} />,
   blockquote: (props) => (
     <Box
       borderLeftColor="gray.400"

@@ -31,7 +31,7 @@ const BlogCard = ({ title, tags, desc, picture, slug, project, ...props }) => {
       <Stack isInline mt={2}>
         {tags.map((tag, idx) => {
           return (
-            <Badge key={idx} variantColor={color(tag)}>
+            <Badge key={idx} colorScheme={color(tag)}>
               {tag}
             </Badge>
           );

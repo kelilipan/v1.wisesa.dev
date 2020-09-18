@@ -14,7 +14,7 @@ import {
 import Image from "graphcms-image";
 import Markdown from "react-markdown";
 import { blogPostRenderer } from "../../util/renderer";
-import { FaCode } from "react-icons/fa";
+import { FaArrowRight, FaCode } from "react-icons/fa";
 export const getStaticProps = async ({ params }) => {
   const { project } = await cms(
     `
@@ -96,12 +96,12 @@ const Post = ({ data }) => {
           <Box mt="4">
             {url && (
               <Button
-                variantColor="blue"
+                colorScheme="blue"
                 as="a"
                 target="_blank"
                 rel="noopener noreferrer"
                 href={url}
-                leftIcon="arrow-forward"
+                leftIcon={<FaArrowRight />}
                 size="sm"
                 mr="2"
               >
@@ -115,7 +115,7 @@ const Post = ({ data }) => {
                 rel="noopener noreferrer"
                 href={source}
                 size="sm"
-                leftIcon={FaCode}
+                leftIcon={<FaCode />}
               >
                 Source code
               </Button>
