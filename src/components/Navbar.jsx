@@ -10,7 +10,8 @@ import {
   Stack,
   useDisclosure,
 } from "@chakra-ui/core";
-import { FaBars, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaBars, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
+import { ImProfile } from "react-icons/im";
 
 import Link from "./Link";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -41,6 +42,14 @@ const Navbar = () => {
     {
       url: "https://www.linkedin.com/in/anvaqta/",
       icon: FaLinkedin,
+    },
+    {
+      url: "https://raisoturu.medium.com/",
+      icon: FaMedium,
+    },
+    {
+      url: "https://read.cv/wisesa",
+      icon: ImProfile,
     },
   ];
   return (
