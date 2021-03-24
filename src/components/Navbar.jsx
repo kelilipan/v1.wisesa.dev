@@ -44,7 +44,7 @@ const Navbar = () => {
       icon: FaLinkedin,
     },
     {
-      url: "https://raisoturu.medium.com/",
+      url: "https://svspicious.medium.com/",
       icon: FaMedium,
     },
     {
