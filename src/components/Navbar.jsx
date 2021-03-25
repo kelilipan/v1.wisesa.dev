@@ -36,7 +36,7 @@ const Navbar = () => {
   ];
   const externalLinks = [
     {
-      url: "https://github.com/raisoturu",
+      url: "https://github.com/svspicious",
       icon: FaGithub,
     },
     {
