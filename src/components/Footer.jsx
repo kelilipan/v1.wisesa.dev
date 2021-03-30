@@ -13,7 +13,7 @@ const Footer = () => {
       </Text>
       <Text color="gray.500" fontSize={10}>
         2020 ©
-        <Link href="https://github.com/raisoturu" color="gray.500">
+        <Link href="https://github.com/svspicious" color="gray.500">
           Wisesa
         </Link>
         . All rights reserved.
