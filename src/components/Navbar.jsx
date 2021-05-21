@@ -48,7 +48,7 @@ const Navbar = () => {
       icon: FaMedium,
     },
     {
-      url: "https://read.cv/wisesa",
+      url: "http://gg.gg/wisesa-cv",
       icon: ImProfile,
     },
   ];
